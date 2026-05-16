@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="96mm" height="56mm" viewBox="0 0 96 56"
+     role="img" aria-label="Bahia Tecnologia — Cartão de Visita Frente">
+
+  <defs>
+    <!-- Brand gradient -->
+    <linearGradient id="bt-brand-h" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#2E8BE6"/>
+      <stop offset="55%"  stop-color="#1FB6A8"/>
+      <stop offset="100%" stop-color="#25D366"/>
+    </linearGradient>
+    <!-- Subtle radial glow -->
+    <radialGradient id="bt-glow" cx="75%" cy="70%" r="60%">
+      <stop offset="0%"   stop-color="#1FB6A8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0A1628" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Gradient for accent bar -->
+    <linearGradient id="bt-accent-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#2E8BE6"/>
+      <stop offset="55%"  stop-color="#1FB6A8"/>
+      <stop offset="100%" stop-color="#25D366"/>
+    </linearGradient>
+    <!-- Clip to artboard -->
+    <clipPath id="artboard-clip">
+      <rect width="96" height="56"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background — navy-950 full bleed -->
+  <rect width="96" height="56" fill="#0A1628"/>
+
+  <!-- Radial glow (bottom-right atmosphere) -->
+  <rect width="96" height="56" fill="url(#bt-glow)"/>
+
+  <!-- Decorative speech-bubble echo (oversized, bottom-right, outline only) -->
+  <g opacity="0.06" transform="translate(58, 18) scale(2.6)" clip-path="url(#artboard-clip)">
+    <path fill="none" stroke="#3FA9FF" stroke-width="0.8"
+      d="M2 1.25 h9.2 a3.5 3.5 0 0 1 0 7 h-1.5 l-1.5 1.5 v-1.5 h-1.5 a1 1 0 0 1 -1 -1 V2.25 a1 1 0 0 1 1 -1 z
+         M5.5 3 h1.5 a1.5 1.5 0 0 1 0 3 h-1.5 z
+         M5.5 6.5 h1.75 a1.5 1.5 0 0 1 0 3 h-1.75 z"/>
+  </g>
+
+  <!-- Accent gradient bar — bottom edge, full width, 0.8mm tall -->
+  <rect x="0" y="55.2" width="96" height="0.8" fill="url(#bt-accent-line)"/>
+
+  <!-- Brand mark (speech-bubble "B") — left side, safe zone -->
+  <!-- Icon at (8, 10), scaled to ~14mm -->
+  <g transform="translate(8, 9) scale(0.29167)" clip-path="url(#artboard-clip)">
+    <!-- 48-unit viewBox scaled to ~14mm (48 * 0.29167 ≈ 14mm) -->
+    <defs>
+      <linearGradient id="bt-icon-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"   stop-color="#2E8BE6"/>
+        <stop offset="55%"  stop-color="#1FB6A8"/>
+        <stop offset="100%" stop-color="#25D366"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#bt-icon-grad)"
+      d="M10 6 h18 a14 14 0 0 1 0 28 h-6 l-6 6 v-6 h-6 a4 4 0 0 1 -4 -4 V10 a4 4 0 0 1 4 -4 z
+         M22 12 h6 a6 6 0 0 1 0 12 h-6 z
+         M22 26 h7 a6 6 0 0 1 0 12 h-7 z" fill-rule="evenodd"/>
+    <g fill="#FFFFFF">
+      <circle cx="15" cy="20" r="1.6"/>
+      <circle cx="20" cy="20" r="1.6"/>
+      <circle cx="25" cy="20" r="1.6"/>
+    </g>
+  </g>
+
+  <!-- Company wordmark — "BAHIA TECNOLOGIA" -->
+  <!-- Positioned right of the icon, vertically centered with it -->
+  <text x="24" y="16.5"
+        font-family="Sora, &apos;Plus Jakarta Sans&apos;, ui-sans-serif, sans-serif"
+        font-weight="700"
+        font-size="7.5"
+        fill="#FFFFFF"
+        letter-spacing="0.4">BAHIA</text>
+  <text x="24" y="23"
+        font-family="Sora, &apos;Plus Jakarta Sans&apos;, ui-sans-serif, sans-serif"
+        font-weight="700"
+        font-size="5.2"
+        fill="#FFFFFF"
+        letter-spacing="1.8">TECNOLOGIA</text>
+
+  <!-- Horizontal rule below wordmark — gradient thin line -->
+  <line x1="24" y1="25.2" x2="86" y2="25.2" stroke="url(#bt-accent-line)" stroke-width="0.35" opacity="0.7"/>
+
+  <!-- Tagline -->
+  <text x="24" y="32"
+        font-family="Sora, &apos;Plus Jakarta Sans&apos;, ui-sans-serif, sans-serif"
+        font-weight="400"
+        font-size="3.8"
+        fill="#B8C2D1"
+        letter-spacing="0.1">Automação · WhatsApp · Inteligência Artificial</text>
+
+  <!-- Micro services line -->
+  <text x="24" y="37"
+        font-family="Inter, ui-sans-serif, system-ui, sans-serif"
+        font-weight="400"
+        font-size="2.8"
+        fill="#6B7A90"
+        letter-spacing="0.05">Chatbots · Atendimento 24h · CRM · Campanhas</text>
+
+  <!-- Location anchor — bottom of safe zone -->
+  <text x="24" y="47"
+        font-family="Inter, ui-sans-serif, system-ui, sans-serif"
+        font-weight="500"
+        font-size="2.6"
+        fill="#3FA9FF"
+        letter-spacing="0.8">SALVADOR · BAHIA</text>
+
+  <!-- Guides layer (hidden) — for print reference -->
+  <g id="guides" display="none">
+    <!-- Trim box (90×50 at offset 3,3) -->
+    <rect x="3" y="3" width="90" height="50" fill="none" stroke="#FF0000" stroke-width="0.25" stroke-dasharray="1,0.5"/>
+    <!-- Safe area (84×44 at offset 6,6) -->
+    <rect x="6" y="6" width="84" height="44" fill="none" stroke="#00FF00" stroke-width="0.25" stroke-dasharray="0.5,0.5"/>
+  </g>
+
+
+  <!-- ═══ PRINT GUIDES (VISIBLE IN THIS PREVIEW FILE) ═══ -->
+  <g id="guides-visible">
+    <!-- Bleed edge = artboard boundary (96×56mm) — no mark needed, it IS the artboard -->
+    <!-- Trim box: 90×50mm at (3,3) — RED dashed -->
+    <rect x="3" y="3" width="90" height="50" fill="none" stroke="#FF3B30" stroke-width="0.3" stroke-dasharray="1.5,0.75"/>
+    <!-- Safe area: 84×44mm at (6,6) — BLUE dashed -->
+    <rect x="6" y="6" width="84" height="44" fill="none" stroke="#007AFF" stroke-width="0.25" stroke-dasharray="0.75,0.75"/>
+    <!-- Corner ticks (trim) -->
+    <line x1="0" y1="3" x2="2" y2="3" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="3" y1="0" x2="3" y2="2" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="94" y1="3" x2="96" y2="3" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="93" y1="0" x2="93" y2="2" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="0" y1="53" x2="2" y2="53" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="3" y1="54" x2="3" y2="56" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="94" y1="53" x2="96" y2="53" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="93" y1="54" x2="93" y2="56" stroke="#FF3B30" stroke-width="0.3"/>
+    <!-- Legend -->
+    <text x="3.5" y="2.2" font-family="monospace" font-size="1.4" fill="#FF3B30">TRIM 90×50mm</text>
+    <text x="6.5" y="5.5" font-family="monospace" font-size="1.3" fill="#007AFF">SAFE 84×44mm</text>
+    <text x="0.3" y="1.5" font-family="monospace" font-size="1.3" fill="#888888">BLEED 96×56mm</text>
+  </g>
+
+</svg>
