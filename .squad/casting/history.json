@@ -1,0 +1,25 @@
+{
+  "universe_usage_history": [
+    {
+      "assignment_id": "2026-05-16-bahiati-site",
+      "universe": "The Matrix",
+      "assigned_at": "2026-05-16T09:03:03.021-07:00",
+      "agent_count": 6
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "2026-05-16-bahiati-site": {
+      "project": "bahiati-site",
+      "created_at": "2026-05-16T09:03:03.021-07:00",
+      "universe": "The Matrix",
+      "members": {
+        "Morpheus": "Lead",
+        "Neo": "Designer visual/brand",
+        "Trinity": "Frontend Dev",
+        "Tank": "Automacao/Integracoes",
+        "Switch": "Conteudo/SEO",
+        "Dozer": "Tester"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Bahia Tecnologia">
+  <defs>
+    <linearGradient id="bt-brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#2E8BE6"/>
+      <stop offset="55%"  stop-color="#1FB6A8"/>
+      <stop offset="100%" stop-color="#25D366"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bt-brand)" d="M10 6 h18 a14 14 0 0 1 0 28 h-6 l-6 6 v-6 h-6 a4 4 0 0 1 -4 -4 V10 a4 4 0 0 1 4 -4 z M22 12 h6 a6 6 0 0 1 0 12 h-6 z M22 26 h7 a6 6 0 0 1 0 12 h-7 z" fill-rule="evenodd"/>
+  <g fill="#FFFFFF">
+    <circle cx="15" cy="20" r="1.6"/>
+    <circle cx="20" cy="20" r="1.6"/>
+    <circle cx="25" cy="20" r="1.6"/>
+  </g>
+</svg>
