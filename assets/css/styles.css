@@ -529,7 +529,7 @@ p { max-width: 65ch; }
   letter-spacing: .08em;
 }
 @media (min-width: 768px) {
-  .stats-strip__grid { grid-template-columns: repeat(4, 1fr); }
+  .stats-strip__grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ── Cards ───────────────────────────────────────────────────────── */
