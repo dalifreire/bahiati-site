@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="96mm" height="56mm" viewBox="0 0 96 56"
-     role="img" aria-label="Bahia Tecnologia — Cartão de Visita Verso">
+     role="img" aria-label="Bahia Tecnologia — Cartão de Visita Verso (Light) — Guides">
 
   <defs>
     <linearGradient id="bt-brand-h" x1="0" y1="0" x2="1" y2="1">
@@ -14,31 +14,15 @@
       <stop offset="55%"  stop-color="#1FB6A8"/>
       <stop offset="100%" stop-color="#25D366"/>
     </linearGradient>
-    <radialGradient id="bt-glow2" cx="80%" cy="30%" r="50%">
-      <stop offset="0%"   stop-color="#2E8BE6" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="#0E1E36" stop-opacity="0"/>
-    </radialGradient>
     <clipPath id="artboard-clip2">
       <rect width="96" height="56"/>
     </clipPath>
   </defs>
 
-  <!-- Background — navy-900 for slight differentiation from front -->
-  <rect width="96" height="56" fill="#0E1E36"/>
-
-  <!-- Atmospheric glow -->
-  <rect width="96" height="56" fill="url(#bt-glow2)"/>
-
-  <!-- Accent gradient bar — top edge -->
+  <rect width="96" height="56" fill="#FAFBFC"/>
   <rect x="0" y="0" width="96" height="0.8" fill="url(#bt-accent-line)"/>
 
-  <!-- ─── LEFT COLUMN: QR Code ─── -->
-  <!-- White QR box with rounded corners -->
-  <rect x="8.0" y="7.5" width="33.0" height="33.0"
-        rx="1.5" ry="1.5" fill="#FFFFFF"/>
-
-  <!-- QR modules — dark (navy-950) on white, scaled to fit inner area -->
-  <g transform="translate(9.5, 9.0) scale(0.697674)"
+    <g transform="translate(9.5, 9.0) scale(0.697674)"
      fill="#0A1628" shape-rendering="crispEdges">
     <rect x="1" y="1" width="1" height="1"/>
 <rect x="2" y="1" width="1" height="1"/>
@@ -871,30 +855,22 @@
 <rect x="40" y="41" width="1" height="1"/>
   </g>
 
-  <!-- QR caption below -->
   <text x="24.5" y="44.0"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="400"
-        font-size="2.2"
-        fill="#6B7A90"
-        text-anchor="middle"
-        letter-spacing="0.1">Escaneie · veja nossas soluções</text>
+        font-weight="400" font-size="2.2" fill="#6B7A90"
+        text-anchor="middle" letter-spacing="0.1">Escaneie · veja nossas soluções</text>
 
-  <!-- ─── DIVIDER (gradient vertical line) ─── -->
-  <line x1="48" y1="7" x2="48" y2="49" stroke="url(#bt-brand-h)" stroke-width="0.25" opacity="0.4"/>
+  <line x1="48" y1="7" x2="48" y2="49" stroke="url(#bt-brand-h)" stroke-width="0.25" opacity="0.35"/>
 
-  <!-- ─── RIGHT COLUMN: Contact info ─── -->
-  <!-- Small logo at top-right column -->
   <g transform="translate(51, 7.5) scale(0.1875)" clip-path="url(#artboard-clip2)">
-    <!-- 48-unit viewBox scaled to 9mm (48 * 0.1875 = 9mm) -->
     <defs>
-      <linearGradient id="bt-icon-back" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient id="bt-icon-back-lg" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%"   stop-color="#2E8BE6"/>
         <stop offset="55%"  stop-color="#1FB6A8"/>
         <stop offset="100%" stop-color="#25D366"/>
       </linearGradient>
     </defs>
-    <path fill="url(#bt-icon-back)"
+    <path fill="url(#bt-icon-back-lg)"
       d="M10 6 h18 a14 14 0 0 1 0 28 h-6 l-6 6 v-6 h-6 a4 4 0 0 1 -4 -4 V10 a4 4 0 0 1 4 -4 z
          M22 12 h6 a6 6 0 0 1 0 12 h-6 z
          M22 26 h7 a6 6 0 0 1 0 12 h-7 z" fill-rule="evenodd"/>
@@ -905,24 +881,18 @@
     </g>
   </g>
 
-  <!-- Company name right column -->
   <text x="61.5" y="10.5"
-        font-family="Sora, &apos;Plus Jakarta Sans&apos;, ui-sans-serif, sans-serif"
-        font-weight="700" font-size="4.5" fill="#FFFFFF" letter-spacing="0.2">BAHIA</text>
+        font-family="Sora, 'Plus Jakarta Sans', ui-sans-serif, sans-serif"
+        font-weight="700" font-size="4.5" fill="#0A1628" letter-spacing="0.2">BAHIA</text>
   <text x="61.5" y="15"
-        font-family="Sora, &apos;Plus Jakarta Sans&apos;, ui-sans-serif, sans-serif"
-        font-weight="600" font-size="3.1" fill="#FFFFFF" letter-spacing="1.0">TECNOLOGIA</text>
+        font-family="Sora, 'Plus Jakarta Sans', ui-sans-serif, sans-serif"
+        font-weight="600" font-size="3.1" fill="#0A1628" letter-spacing="1.0">TECNOLOGIA</text>
 
-  <!-- Divider line under name -->
-  <line x1="51" y1="17" x2="89" y2="17" stroke="url(#bt-accent-line)" stroke-width="0.3" opacity="0.6"/>
+  <line x1="51" y1="17" x2="89" y2="17" stroke="url(#bt-accent-line)" stroke-width="0.3" opacity="0.5"/>
 
-  <!-- ── WhatsApp ── -->
-  <!-- WhatsApp icon (inline minimal) -->
   <g transform="translate(51, 20.5)">
-    <!-- WhatsApp circle icon -->
     <circle cx="2.5" cy="2.5" r="2.5" fill="#25D366"/>
     <path d="M2.5 0.5 a2 2 0 0 1 0 4 l-0.5 0.5 0.2-0.8 a2 2 0 0 1 0-3.7 z" fill="#25D366"/>
-    <!-- Phone handset simplified in white -->
     <path d="M1.4 1.4 q0.2-0.3 0.6-0.2 l0.4 0.2 q0.2 0.1 0.1 0.3 l-0.2 0.4
              q-0.1 0.2 0.1 0.4 l0.3 0.3 q0.2 0.1 0.4 0 l0.4-0.2 q0.2-0.1 0.3 0.1
              l0.2 0.5 q0.1 0.2-0.2 0.4 q-0.8 0.4-1.5-0.3 l-0.5-0.6 q-0.6-0.8-0.4-1.3 z"
@@ -930,39 +900,47 @@
   </g>
   <text x="57" y="23.5"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="500" font-size="3.2" fill="#FFFFFF">(71) 98380-3720</text>
+        font-weight="500" font-size="3.2" fill="#0A1628">(71) 98380-3720</text>
 
-  <!-- ── Email ── -->
   <g transform="translate(51, 27)">
-    <!-- Email envelope icon -->
-    <rect x="0" y="0.5" width="5" height="3.5" rx="0.4" fill="none" stroke="#3FA9FF" stroke-width="0.5"/>
-    <polyline points="0,0.5 2.5,2.8 5,0.5" fill="none" stroke="#3FA9FF" stroke-width="0.5"/>
+    <circle cx="2.5" cy="2.0" r="2.5" fill="#2E8BE6"/>
+    <rect x="0.7" y="0.8" width="3.6" height="2.5" rx="0.3" fill="none" stroke="#FFFFFF" stroke-width="0.45"/>
+    <polyline points="0.7,0.8 2.5,2.2 4.3,0.8" fill="none" stroke="#FFFFFF" stroke-width="0.45"/>
   </g>
-  <text x="57" y="30"
+  <text x="57" y="29.5"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="400" font-size="1.85" fill="#B8C2D1">contato@bahiatecnologia.com.br</text>
+        font-weight="400" font-size="1.85" fill="#2A3447">contato@bahiatecnologia.com.br</text>
 
-  <!-- ── Website ── -->
   <g transform="translate(51, 33.5)">
-    <!-- Globe icon simplified -->
-    <circle cx="2.5" cy="2.5" r="2.5" fill="none" stroke="#3FA9FF" stroke-width="0.5"/>
-    <ellipse cx="2.5" cy="2.5" rx="1.2" ry="2.5" fill="none" stroke="#3FA9FF" stroke-width="0.4"/>
-    <line x1="0" y1="2.5" x2="5" y2="2.5" stroke="#3FA9FF" stroke-width="0.4"/>
+    <circle cx="2.5" cy="2.5" r="2.5" fill="#2E8BE6"/>
+    <circle cx="2.5" cy="2.5" r="1.5" fill="none" stroke="#FFFFFF" stroke-width="0.4"/>
+    <ellipse cx="2.5" cy="2.5" rx="0.7" ry="1.5" fill="none" stroke="#FFFFFF" stroke-width="0.35"/>
+    <line x1="1.0" y1="2.5" x2="4.0" y2="2.5" stroke="#FFFFFF" stroke-width="0.35"/>
   </g>
-  <text x="57" y="36.5"
+  <text x="57" y="36.0"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="400" font-size="1.85" fill="#B8C2D1">bahiatecnologia.com.br</text>
+        font-weight="400" font-size="1.85" fill="#2A3447">bahiatecnologia.com.br</text>
 
-  <!-- Location at bottom right -->
   <text x="88" y="47.5"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="500" font-size="2.4" fill="#3FA9FF"
+        font-weight="500" font-size="2.4" fill="#2E8BE6"
         text-anchor="end" letter-spacing="0.6">SALVADOR · BA</text>
 
-  <!-- Guides layer (hidden) -->
-  <g id="guides" display="none">
-    <rect x="3" y="3" width="90" height="50" fill="none" stroke="#FF0000" stroke-width="0.25" stroke-dasharray="1,0.5"/>
-    <rect x="6" y="6" width="84" height="44" fill="none" stroke="#00FF00" stroke-width="0.25" stroke-dasharray="0.5,0.5"/>
+  <!-- ═══ PRINT GUIDES ═══ -->
+  <g id="guides-visible">
+    <rect x="3" y="3" width="90" height="50" fill="none" stroke="#FF3B30" stroke-width="0.3" stroke-dasharray="1.5,0.75"/>
+    <rect x="6" y="6" width="84" height="44" fill="none" stroke="#007AFF" stroke-width="0.25" stroke-dasharray="0.75,0.75"/>
+    <line x1="0" y1="3" x2="2" y2="3" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="3" y1="0" x2="3" y2="2" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="94" y1="3" x2="96" y2="3" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="93" y1="0" x2="93" y2="2" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="0" y1="53" x2="2" y2="53" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="3" y1="54" x2="3" y2="56" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="94" y1="53" x2="96" y2="53" stroke="#FF3B30" stroke-width="0.3"/>
+    <line x1="93" y1="54" x2="93" y2="56" stroke="#FF3B30" stroke-width="0.3"/>
+    <text x="3.5" y="2.2" font-family="monospace" font-size="1.4" fill="#FF3B30">TRIM 90×50mm</text>
+    <text x="6.5" y="5.5" font-family="monospace" font-size="1.3" fill="#007AFF">SAFE 84×44mm</text>
+    <text x="0.3" y="1.5" font-family="monospace" font-size="1.3" fill="#888888">BLEED 96×56mm</text>
   </g>
 
 </svg>

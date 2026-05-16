@@ -41,3 +41,19 @@
 - **Micro services frente:** "Chatbots · Atendimento 24h · CRM · Campanhas" (44c) a `font-size="2.8"` transbordava (right≈97mm). Reduzir para `font-size="2.5"` → right≈87mm ✓.
 - **Email/Website verso:** Coluna direita inicia em x=57, safe-right=90 → apenas 33mm disponíveis. Email de 30c a 2.9mm transbordava (~104mm). Solução: `font-size="2.0"` (right≈88mm ✓). Website 21c a 2.0mm: right≈80mm ✓. Phone ancora em 3.2mm sem problema (right≈83mm ✓).
 - **Verificação:** Sempre calcular `right_edge = x + n_chars × (factor × font_size + letter_spacing)` antes de finalizar. Factor 0.55 para texto misto, 0.52 para todo-minúsculo email/url. Resultado deve ser ≤ 90mm.
+
+---
+
+## 2026-05-16 — Lição: margem tipográfica para impressão
+
+**Tarefa:** Cartão de visita — dark variant typography tightening + light variant creation.
+
+**Lição aprendida:** Print typography should target `right_edge ≤ 88mm` (5mm from trim), not just ≤ 90mm (safe area boundary). The extra 2mm of optical margin makes a significant visual difference — text that technically fits inside the safe zone can still *feel* tight against the edge. The 88mm target (i.e., 5mm gap from the 93mm trim right edge in a 96mm artboard) gives the human eye real breathing room and prevents any production-creep risk.
+
+**Aplicado em:** `cartao-visita-frente.svg`, `cartao-visita-verso.svg` e seus pares light/guides.
+
+**Mudanças concretas:**
+- Sub-tagline front: reduzida de 4 para 3 itens ("Campanhas" removido) — right-edge caiu de ~87mm para ~69mm
+- Email font-size verso: 2.0 → 1.85 — right-edge: 90mm → 87.5mm
+- SALVADOR · BA verso: anchor-end movido de x=89 para x=88
+

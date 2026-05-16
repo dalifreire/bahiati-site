@@ -1,17 +1,42 @@
 # Bahia Tecnologia — Cartão de Visita · Print Spec Sheet
 
-> Gerado em: 2026-05-16T10:34:40 · Designer: Neo (Bahia Tecnologia Squad)
+> Gerado em: 2026-05-16T10:53:04 · Designer: Neo (Bahia Tecnologia Squad)
 
 ---
 
 ## Arquivos
 
-| Arquivo | Uso |
-|---|---|
-| `cartao-visita-frente.svg` | **Arquivo de envio** — frente, sem guias |
-| `cartao-visita-verso.svg` | **Arquivo de envio** — verso, sem guias |
-| `cartao-visita-frente-guides.svg` | Prévia com guias de sangria/corte/área segura |
-| `cartao-visita-verso-guides.svg` | Prévia com guias de sangria/corte/área segura |
+Dois **variantes** disponíveis: **Dark** (fundo navy, sensação premium tech) e **Light** (fundo branco, clean/approachable). Ambos são adequados para envio à gráfica — escolha conforme preferência estética ou instrução do cliente.
+
+| Arquivo | Variante | Uso |
+|---|---|---|
+| `cartao-visita-frente.svg` | **Dark** | Arquivo de envio — frente, sem guias |
+| `cartao-visita-verso.svg` | **Dark** | Arquivo de envio — verso, sem guias |
+| `cartao-visita-frente-guides.svg` | **Dark** | Prévia com guias de sangria/corte/área segura |
+| `cartao-visita-verso-guides.svg` | **Dark** | Prévia com guias de sangria/corte/área segura |
+| `cartao-visita-frente-light.svg` | **Light** | Arquivo de envio — frente, sem guias |
+| `cartao-visita-verso-light.svg` | **Light** | Arquivo de envio — verso, sem guias |
+| `cartao-visita-frente-light-guides.svg` | **Light** | Prévia com guias de sangria/corte/área segura |
+| `cartao-visita-verso-light-guides.svg` | **Light** | Prévia com guias de sangria/corte/área segura |
+
+> Para impressão, envie o par **sem guias** (`-frente` + `-verso`) da variante escolhida.
+
+---
+
+## Diferenças entre variantes
+
+| Aspecto | Dark | Light |
+|---|---|---|
+| Background | `navy-950 #0A1628` | `#FAFBFC` (off-white quente) |
+| Texto principal | `#FFFFFF` branco | `navy-950 #0A1628` |
+| Tagline principal | `gray-300 #B8C2D1` | `gray-700 #2A3447` |
+| Texto secundário / serviços | `gray-500 #6B7A90` | `gray-500 #6B7A90` |
+| Accent location | `blue-400 #3FA9FF` | `blue-500 #2E8BE6` |
+| Logo "B" gradiente | Mantido | Mantido |
+| Barra accent gradiente | Mantida (bottom/top) | Mantida (bottom/top) |
+| Ícones email/web | Outline `#3FA9FF` | Círculo `#2E8BE6` + ícone branco |
+| QR code | `#0A1628` em caixa branca | `#0A1628` direto no fundo branco |
+| Ornamento "B" fantasma | Outline `#3FA9FF` opacity 6% | `#E6EAF0` opacity 55% |
 
 ---
 
@@ -25,9 +50,10 @@
 | **Corte (trim)** — tamanho final | **90mm × 50mm** (padrão brasileiro) |
 | **Área segura (safe zone)** — conteúdo crítico | **84mm × 44mm** (3mm dentro do corte) |
 | **Sangria por lado** | **3mm** |
+| **Margem visual de texto** | **≤ 88mm** (5mm da borda de corte) |
 
-> Todo conteúdo de texto, logo e QR code está dentro da área segura.  
-> O fundo (navy `#0A1628`) se estende até a borda da sangria.
+> Todo texto termina em ≤ 88mm (coordenada artboard), dando 5mm de margem óptica até o corte.  
+> Isso é mais conservador que os 3mm da safe area — resulta em tipografia visivelmente mais arejada.
 
 ### Guias de cores nos arquivos `-guides.svg`
 
@@ -37,22 +63,44 @@
 
 ---
 
+## Verificação de margens tipográficas
+
+Todos os elementos de texto foram verificados com a fórmula:
+`right_edge = x + (n_chars × font_size × 0.55) + ((n_chars-1) × letter_spacing)`
+
+| Elemento | right_edge (mm) | Margem até trim (93mm) |
+|---|---|---|
+| BAHIA (frente) | 46.2 | 46.8mm ✅ |
+| TECNOLOGIA (frente) | 68.8 | 24.2mm ✅ |
+| Automação · WhatsApp | 67.7 | 25.3mm ✅ |
+| Inteligência Artificial | 74.3 | 18.7mm ✅ |
+| Chatbots · Atendimento 24h · CRM | 69.5 | 23.5mm ✅ |
+| SALVADOR · BAHIA | 58.9 | 34.1mm ✅ |
+| BAHIA (verso) | 74.7 | 18.3mm ✅ |
+| TECNOLOGIA (verso) | 87.5 | 5.5mm ✅ |
+| (71) 98380-3720 | 83.4 | 9.6mm ✅ |
+| contato@bahiatecnologia.com.br | 87.5 | 5.5mm ✅ |
+| bahiatecnologia.com.br | 79.4 | 13.6mm ✅ |
+| Escaneie · veja nossas soluções | 65.0 | 28.0mm ✅ |
+| SALVADOR · BA (anchor end) | 88.0 | 5.0mm ✅ |
+
+---
+
 ## Paleta de Cores (RGB → CMYK reference)
 
 | Nome | Hex | Uso | CMYK aproximado |
 |---|---|---|---|
-| `navy-950` | `#0A1628` | Background principal (frente e verso) | C:96 M:84 Y:50 K:73 |
-| `navy-900` | `#0E1E36` | Background verso | C:94 M:80 Y:46 K:67 |
-| `navy-800` | `#13294B` | Superfície elevada (não usado no cartão) | C:92 M:75 Y:42 K:55 |
-| `blue-500` | `#2E8BE6` | Gradiente brand (início), ícones | C:80 M:40 Y:0 K:10 |
-| `blue-400` | `#3FA9FF` | Texto accent (Salvador · BA, ícones) | C:75 M:33 Y:0 K:0 |
+| `navy-950` | `#0A1628` | Background dark / texto light | C:96 M:84 Y:50 K:73 |
+| `navy-900` | `#0E1E36` | Background verso dark | C:94 M:80 Y:46 K:67 |
+| `blue-500` | `#2E8BE6` | Gradiente brand (início), ícones light | C:80 M:40 Y:0 K:10 |
+| `blue-400` | `#3FA9FF` | Accent dark (location, ícones) | C:75 M:33 Y:0 K:0 |
 | `teal-500` | `#1FB6A8` | Gradiente brand (meio) | C:82 M:22 Y:38 K:0 |
-| `green-500` | `#25D366` | **WhatsApp** — ícone apenas | C:72 M:0 Y:75 K:0 |
-| `white` | `#FFFFFF` | Texto principal, caixa QR code | C:0 M:0 Y:0 K:0 |
-| `gray-300` | `#B8C2D1` | Texto contato secundário | C:28 M:18 Y:10 K:0 |
-| `gray-500` | `#6B7A90` | Texto muted (caption QR) | C:50 M:35 Y:22 K:0 |
-
-> **Atenção para a gráfica:** O fundo escuro `#0A1628` é muito saturado — peça à gráfica para testar em prova física antes de imprimir a tiragem completa. CMYK profundo pode variar entre equipamentos.
+| `green-500` | `#25D366` | **WhatsApp** — ícone | C:72 M:0 Y:75 K:0 |
+| `white` | `#FFFFFF` | Texto dark / gliphos em ícones light | C:0 M:0 Y:0 K:0 |
+| `off-white` | `#FAFBFC` | Background light | C:1 M:1 Y:0 K:1 |
+| `gray-300` | `#B8C2D1` | Texto contato dark | C:28 M:18 Y:10 K:0 |
+| `gray-500` | `#6B7A90` | Texto muted (ambas as variantes) | C:50 M:35 Y:22 K:0 |
+| `gray-700` | `#2A3447` | Tagline light, contato light | C:82 M:64 Y:40 K:26 |
 
 ---
 
@@ -63,8 +111,7 @@
 | **Sora** (700 Bold, 600 SemiBold) | Nome da empresa, tagline | [Google Fonts](https://fonts.google.com/specimen/Sora) — licença OFL gratuita |
 | **Inter** (500 Medium, 400 Regular) | Contato, caption QR, location | [Google Fonts](https://fonts.google.com/specimen/Inter) — licença OFL gratuita |
 
-> SVG usa `font-family` com fallbacks (`ui-sans-serif`, `system-ui`, `sans-serif`).  
-> Para garantir renderização exata na gráfica, **converter textos em outlines** (Inkscape: *Texto → Objeto em caminho*) antes de enviar o arquivo final.
+> Para garantir renderização exata na gráfica, **converter textos em outlines** antes de enviar.
 
 ---
 
@@ -72,68 +119,78 @@
 
 - **Conteúdo codificado:** `https://www.bahiatecnologia.com.br/portifolio/`
 - **Nível de correção de erros:** H (alta — suporta até 30% de dano)
-- **Versão QR:** automática (versão 4, matriz 43×43 módulos)
-- **Tamanho no cartão:** 30mm × 30mm (dentro de caixa branca 33mm × 33mm)
-- **Gerado com:** Python `qrcode` 8.2 — módulos SVG nativos (vetorial puro)
-- ✅ **Escaneável:** testado — cada módulo é um `<rect>` SVG em escala exata
+- **Tamanho no cartão:** ~30mm × 30mm
+- **Dark:** módulos `#0A1628` em caixa branca arredondada
+- **Light:** módulos `#0A1628` diretamente no fundo branco (caixa removida — desnecessária)
+- ✅ **Escaneável:** vetorial puro, testado
 
 ---
 
 ## Recomendações para a Gráfica
 
-### Papel e Acabamento Sugeridos
-
+### Variante Dark
 ```
 Papel:       Couché Fosco 300g/m²
 Laminação:   Fosca (ambos os lados)
-Verniz:      Localizado UV brilhante no logo e na palavra "BAHIA TECNOLOGIA" (frente) — opcional, premium
-Corte:       Reto (padrão)
-Tiragem:     mínimo 100 unidades para custo-benefício
+Verniz:      UV brilhante localizado no logo (opcional, premium)
+Observação:  Fundo escuro intenso — solicitar prova de cor antes da tiragem
 ```
 
-### O que pedir para a gráfica (uma frase)
-
-> *"Cartão de visita 9×5cm, frente e verso, Couché fosco 300g, laminação fosca nos dois lados, fundo escuro cheio — quero prova de cor antes da tiragem."*
-
-### Formatos de arquivo aceitos
-
-- ✅ **SVG** (enviado) — vetorial puro, sem perda de qualidade
-- Os arquivos `*-frente.svg` e `*-verso.svg` (sem guias) são os arquivos de produção
-- Se a gráfica exigir PDF: abrir no [Inkscape](https://inkscape.org/) (gratuito) → *Arquivo → Salvar como → PDF*
-- Se a gráfica exigir CMYK: converter cores no Inkscape ou Adobe Illustrator antes do export PDF
+### Variante Light
+```
+Papel:       Couché Fosco 300g/m² ou Couché Brilhante 300g/m²
+Laminação:   Fosca ou brilhante (ambas funcionam bem com fundo branco)
+Verniz:      UV brilhante no logo e barra gradiente (opcional, elegante)
+Observação:  Fundo branco — aprovação de cor mais previsível
+```
 
 ### Checklist antes de enviar
 
 - [ ] Fontes convertidas em outlines (Inkscape: selecionar tudo → *Texto → Objeto em caminho*)
-- [ ] Fundo cobre toda a sangria (96mm × 56mm) ✅ já ok no SVG
-- [ ] QR code testado com câmera do celular ✅ 
+- [ ] Fundo cobre toda a sangria (96mm × 56mm) ✅
+- [ ] QR code testado com câmera do celular ✅
 - [ ] Cores revisadas em prova impressa antes da tiragem
-- [ ] Arquivo sem guias usado (`cartao-visita-frente.svg`, não o `-guides.svg`)
+- [ ] Arquivo sem guias usado para produção (não o `-guides.svg`)
 
 ---
 
-## Frente — Descrição Visual
+## Frente Dark — Descrição Visual
 
 - **Background:** `navy-950 #0A1628` (full bleed)
-- **Elemento decorativo:** balão de fala echo, outline, opacity 6%, canto inferior direito
-- **Gradiente accent:** barra horizontal `#2E8BE6 → #1FB6A8 → #25D366` na borda inferior (0.8mm)
-- **Logo:** ícone "B" speech-bubble gradiente, 14mm, canto superior esquerdo
-- **Wordmark:** "BAHIA" Sora Bold 7.5pt + "TECNOLOGIA" Sora Bold 5.2pt com letter-spacing largo
-- **Tagline:** "Automação · WhatsApp · Inteligência Artificial" — Sora 3.8pt, `#B8C2D1`
-- **Sub-tagline:** "Chatbots · Atendimento 24h · CRM · Campanhas" — Inter 2.8pt, `#6B7A90`
-- **Location:** "SALVADOR · BAHIA" — Inter Medium 2.6pt, `#3FA9FF`, uppercase
+- **Ornamento:** balão de fala echo, outline `#3FA9FF`, opacity 6%, canto inferior direito
+- **Gradiente accent:** barra `#2E8BE6 → #1FB6A8 → #25D366` na borda inferior
+- **Logo:** ícone "B" speech-bubble gradiente, 14mm
+- **Wordmark:** "BAHIA" 7.5pt + "TECNOLOGIA" 5.2pt — branco sobre navy
+- **Tagline:** "Automação · WhatsApp / Inteligência Artificial" — 3.8pt, `#B8C2D1`
+- **Sub-tagline:** "Chatbots · Atendimento 24h · CRM" — 2.5pt, `#6B7A90`
+- **Location:** "SALVADOR · BAHIA" — 2.6pt, `#3FA9FF`
 
-## Verso — Descrição Visual
+## Frente Light — Descrição Visual
 
-- **Background:** `navy-900 #0E1E36` (leve diferenciação do frente)
-- **Gradiente accent:** barra `#2E8BE6 → #1FB6A8 → #25D366` na borda superior (0.8mm)
-- **Coluna esquerda:** QR code 30mm em caixa branca com bordas arredondadas + caption "Escaneie · veja nossas soluções"
-- **Divisória:** linha vertical gradiente, opacity 40%
-- **Coluna direita:** logo 9mm + "BAHIA / TECNOLOGIA" + linha divisória + 3 linhas de contato com ícones:
-  - 🟢 WhatsApp (verde `#25D366`) + `(71) 98380-3720`
-  - 🔵 Envelope (azul `#3FA9FF`) + `contato@bahiatecnologia.com.br`
-  - 🔵 Globo (azul `#3FA9FF`) + `bahiatecnologia.com.br`
-- **Location:** "SALVADOR · BA" — canto inferior direito
+- **Background:** `#FAFBFC` off-white
+- **Ornamento:** balão de fala echo, `#E6EAF0` opacity 55% — muito sutil sobre branco
+- **Gradiente accent:** IGUAL ao dark (assinatura da marca)
+- **Logo:** gradiente IGUAL (funciona em qualquer fundo)
+- **Wordmark:** "BAHIA" / "TECNOLOGIA" — `navy-950 #0A1628` sobre branco
+- **Tagline:** `gray-700 #2A3447`; Sub-tagline: `gray-500 #6B7A90`
+- **Location:** "SALVADOR · BAHIA" — `blue-500 #2E8BE6`
+
+## Verso Dark — Descrição Visual
+
+- **Background:** `navy-900 #0E1E36`
+- **Gradiente accent:** barra na borda superior
+- **QR:** módulos `#0A1628` em caixa branca arredondada 33mm × 33mm
+- **Contatos:** ícones outline `#3FA9FF`; textos branco / `#B8C2D1`
+- **Location:** "SALVADOR · BA" `#3FA9FF`, anchor-end x=88
+
+## Verso Light — Descrição Visual
+
+- **Background:** `#FAFBFC`
+- **QR:** módulos `#0A1628` diretamente no fundo branco (sem caixa)
+- **Ícones email/web:** círculos `blue-500 #2E8BE6` com gliphos brancos
+- **WhatsApp:** `green-500 #25D366` (igual)
+- **Contatos:** phone `navy-950`; email/web `gray-700 #2A3447`
+- **Location:** `blue-500 #2E8BE6`, anchor-end x=88
 
 ---
 

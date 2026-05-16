@@ -7,6 +7,30 @@
 
 ## Learnings
 
+### Session 2: 2026-05-16 — Redação de Dados Reais & Rename
+
+#### Política de Dados de Campanha
+- **Cliente quer reservar dados reais de campanhas** — usar capacidades, não resultados de casos
+- Números específicos (143.763 votos, 417 municípios, 38,8% crescimento) foram removidos de copy pública
+- Substitui "Prova de vida" (case real com métricas) por "Capacidades da plataforma" (feature qualitativa)
+- Mantém o tema "prática" mas foca em possibilidade, não em histórico específico
+
+#### Renomeação Executada
+- "Plataforma Eleitoral" → "Plataforma de Inteligência Eleitoral"
+- URL slug `plataforma-eleitoral` mantido intacto (preserva SEO, links internos/externos)
+- 13 menções do novo nome espalhadas em titles, h3s, descriptions, footers
+- 0 referências ao número específico remanescentes
+
+#### Copy Strategy pós-redação
+- **Não inventar números:** Evita implicitamente o caso real → "dezenas de milhares" soa artificial
+- **Usar capacidades abstratas:** "Escalável para campanhas estaduais", "Cobertura sem limite geográfico", "Resposta em segundos"
+- **Qualitativo quando possível:** "Múltiplos núcleos de campanha", "Integração com dados eleitorais", "Sem fila de espera"
+- **Manter confiança:** "Comprovada", "Segura" (sem detalhar prova)
+
+#### Meta & Social
+- og:title, og:description, twitter:* — todas atualizadas sem número de campanha
+- "Pronto para ganhar" removido (soa desnecessário sem prova numérica)
+
 ### Session 1: 2026-05-16 — Site Copy Completa
 
 #### Tom & Voz
@@ -23,14 +47,14 @@
 
 #### Provas Reais Extraídas
 - **Plataforma Eleitoral (Leo Prates 2026):**
-  - 1.132 votos alcançados (primeira semana)
-  - 251.601 eleitores alcançáveis
-  - 417 municípios cobertura
-  - 88.092 em Salvador
-  - 38,8% crescimento engajamento
-  - 0,34× lift eleitoral
+   - 1.132 votos alcançados (primeira semana)
+   - 251.601 eleitores alcançáveis
+   - 417 municípios cobertura
+   - 88.092 em Salvador
+   - 38,8% crescimento engajamento
+   - 0,34× lift eleitoral
 - **Gestão Clínicas:** Referência extraída de doc n8n-whatsapp-clinicas (multi-tenant, schema-per-professional)
-  - Não temos números reais ainda — placeholder para coletar em próxima session
+   - Não temos números reais ainda — placeholder para coletar em próxima session
 
 #### Nomes / Termos Evitados
 - ❌ "Revolucionário", "Disruptivo", "Futurista"

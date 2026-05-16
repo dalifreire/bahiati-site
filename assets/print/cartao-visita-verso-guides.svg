@@ -940,7 +940,7 @@
   </g>
   <text x="57" y="30"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="400" font-size="2.0" fill="#B8C2D1">contato@bahiatecnologia.com.br</text>
+        font-weight="400" font-size="1.85" fill="#B8C2D1">contato@bahiatecnologia.com.br</text>
 
   <!-- ── Website ── -->
   <g transform="translate(51, 33.5)">
@@ -951,10 +951,10 @@
   </g>
   <text x="57" y="36.5"
         font-family="Inter, ui-sans-serif, sans-serif"
-        font-weight="400" font-size="2.0" fill="#B8C2D1">bahiatecnologia.com.br</text>
+        font-weight="400" font-size="1.85" fill="#B8C2D1">bahiatecnologia.com.br</text>
 
   <!-- Location at bottom right -->
-  <text x="89" y="47.5"
+  <text x="88" y="47.5"
         font-family="Inter, ui-sans-serif, sans-serif"
         font-weight="500" font-size="2.4" fill="#3FA9FF"
         text-anchor="end" letter-spacing="0.6">SALVADOR · BA</text>
