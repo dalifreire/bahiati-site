@@ -34,14 +34,6 @@
 - **Paper rec:** Couché fosco 300g + laminação fosca + verniz UV localizado no logo (opcional premium). Prova de cor física obrigatória para fundo escuro `#0A1628`.
 - **Guides layer:** Incluída como `<g id="guides" display="none">` nos arquivos de produção. Arquivos `-guides.svg` separados com guias visíveis para preview — linha vermelha = trim, azul = safe.
 
-**2026-05-16T10:45:26.480-07:00 — Cartão de Visita: Correção de Overflow de Tipografia**
-
-- **Safe-area rule de ouro:** Com x_start=24mm e safe-right=90mm, há apenas 66mm para texto na frente. Taglines longas **devem** ser verificadas antes de fechar arquivo. Regra prática: máximo ~28–32 caracteres por linha a `font-size="3.8"` (fator 0.55 + letter-spacing 0.1).
-- **Tagline frente:** "Automação · WhatsApp · Inteligência Artificial" (46c) não cabe em uma linha a 3.8mm. Solução: quebrar em 2 linhas — L1 "Automação · WhatsApp" (20c, right≈68mm) + L2 "Inteligência Artificial" (23c, right≈74mm). Espaçamento vertical: L1 y=30, L2 y=35, secondary y=40.5, location y=47.
-- **Micro services frente:** "Chatbots · Atendimento 24h · CRM · Campanhas" (44c) a `font-size="2.8"` transbordava (right≈97mm). Reduzir para `font-size="2.5"` → right≈87mm ✓.
-- **Email/Website verso:** Coluna direita inicia em x=57, safe-right=90 → apenas 33mm disponíveis. Email de 30c a 2.9mm transbordava (~104mm). Solução: `font-size="2.0"` (right≈88mm ✓). Website 21c a 2.0mm: right≈80mm ✓. Phone ancora em 3.2mm sem problema (right≈83mm ✓).
-- **Verificação:** Sempre calcular `right_edge = x + n_chars × (factor × font_size + letter_spacing)` antes de finalizar. Factor 0.55 para texto misto, 0.52 para todo-minúsculo email/url. Resultado deve ser ≤ 90mm.
-
 ---
 
 ## 2026-05-16 — Lição: margem tipográfica para impressão
@@ -56,4 +48,14 @@
 - Sub-tagline front: reduzida de 4 para 3 itens ("Campanhas" removido) — right-edge caiu de ~87mm para ~69mm
 - Email font-size verso: 2.0 → 1.85 — right-edge: 90mm → 87.5mm
 - SALVADOR · BA verso: anchor-end movido de x=89 para x=88
+
+**Light variant design** (4 SVGs):
+- Background: `#FAFBFC` (warm off-white) para versatilidade com gráficas padrão
+- Text: `navy-950 #0A1628` (mesmo preto do dark) + `gray-700 #2A3447` para tagline
+- Accents: `blue-500 #2E8BE6` (vs. `blue-400 #3FA9FF` no dark)
+- QR code: direto no fundo branco (sem caixa branca adicional)
+- Ornamento "B" fantasma: `#E6EAF0` a 55% opacity (vs. outline no dark)
+- Ícones email/web: círculo `#2E8BE6` + ícone branco (vs. outline no dark)
+
+Tipografia e grid mantidos idênticos entre variantes — mudanças são puramente de cor/tone.
 
