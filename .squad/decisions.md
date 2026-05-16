@@ -26,6 +26,42 @@ Bahia Tecnologia agora mantém **duas variantes impressas do cartão de visita**
 **Arquivos:** 8 SVGs criados (4 dark, 4 light) — 2 frente + 2 verso por variante, com/sem guias.  
 **Tipografia:** Todos textos ajustados para ≤88mm (margen óptica de 5mm do corte).
 
+### 2026-05-16T12:52:37-07:00: Cartão de Visita v3 — Redesign mockup-aligned
+
+**By:** Neo (Designer Visual/Brand)
+**Status:** Aprovado para produção
+**Requested by:** Dali Freire ("Achei que esses modelos ficaram mais bonitos" — solicitou que o estilo do mockup substituísse os cards atuais)
+
+**O que mudou:**
+
+Refatoração completa dos 8 SVGs em `assets/print/`. Substitui integralmente a v2.
+
+**Frente:**
+- Balão de fala **outline gigante** (~75% da altura, stroke gradiente blue→teal→green) ocupa a metade direita do cartão, bleeds intencionalmente off-right e off-bottom. É a nova assinatura visual da marca.
+- Tagline reformulada como small-caps em 2 linhas: "AUTOMAÇÕES PARA **WHATSAPP** / E **INTELIGÊNCIA ARTIFICIAL**" (palavras-chave em teal/blue).
+- Logo + wordmark "Bahia / Tecnologia" no canto superior esquerdo.
+
+**Verso:**
+- Split orgânico cream × navy separado por **curva-S em Bezier suave** (não mais layout retangular).
+- Headline canônica nova: "**Automatize conversas. / Inteligência que conecta.**" — palavra "conecta" em `green-500`.
+- Contatos com **ícones circulares preenchidos** `blue-500` + gliphos brancos (vs outline na v2).
+- Painel direito navy contém: ícone WhatsApp, QR code 18mm com tile branco, caption "ESCANEIE E CONHEÇA / NOSSAS **SOLUÇÕES**", linhas decorativas de circuito teal.
+
+**Light variant:**
+- Frente: fundo `#FAFBFC`, texto navy, balão outline em gradiente blue→teal→navy mais sóbrio.
+- Verso: lado esquerdo branco + painel direito `pale-blue #E6EFF5` (em vez de navy). Mantém curva e WhatsApp green inalterado.
+
+**Tipografia — verificação:** Todos os 14 elementos textuais validados contra `right_edge ≤ 88mm`. Caption "ESCANEIE E CONHEÇA" foi ajustada de center=x75 para center=x74 (right-edge passou de 88.3 para 87.3mm) durante a auditoria.
+
+**Impacto downstream:**
+- **Trinity:** o balão outline gigante deve virar componente reutilizável (`<BubbleOutline>`) para hero/divider de páginas. SVG do verso pode virar referência de hero split.
+- **Switch:** nova headline canônica para mid-funnel — "Automatize conversas. Inteligência que conecta." A copy antiga ("Chatbots · Atendimento 24h · CRM") foi removida.
+- **Identidade no site:** os ícones de contato (circle preenchido + glyph branco) substituem o padrão outline anterior em todas as superfícies de contato.
+
+**Arquivos:** 8 SVGs em `assets/print/` (4 dark + 4 light × com/sem guias). README.md reescrito com auditoria tipográfica v3.
+
+**Reversibilidade:** Build determinístico via `tmp/build_cards.py`; arquivos v2 sobrescritos. Para reverter, recuperar do histórico git.
+
 ## Governance
 
 - All meaningful changes require team consensus

@@ -59,3 +59,19 @@
 
 Tipografia e grid mantidos idênticos entre variantes — mudanças são puramente de cor/tone.
 
+
+## Learnings
+
+**2026-05-16T12:52:37-07:00 — Cartão de Visita Redesign v3 (mockup-aligned)**
+
+Refatoração completa dos 8 SVGs após Dali aprovar um mockup novo. Substitui v2 inteira.
+
+- **Frente — assinatura visual nova:** balão de fala outline gigante (path do logo escalado ~1.55×) ocupa a metade direita do cartão, com stroke 0.6mm em gradiente `blue-400 → teal-500 → green-500`. Os 3 dots internos também viram circles outline. Esse outline gigante deve virar o **motivo gráfico recorrente** em heros e divisores web — substitui o balão fantasma 6% opacity da v2.
+- **Verso — split com curva-S:** abandonei layout left/right plano. Agora é um split orgânico cream (esquerda, ~55%) × navy (direita, ~45%) usando dois cúbicos Bezier para a fronteira. Path: `M 96 0 L 56 0 C 56 16, 66 22, 62 32 C 58 42, 54 50, 54 56 L 96 56 Z`. A curva começa quase vertical no topo, dobra suavemente no meio e termina quase vertical no rodapé — replicar essa exata curva em hero sections quando precisar de divisão dark/light.
+- **Headline nova oficial:** "Automatize conversas. / Inteligência que conecta." — palavra "conecta" sempre em `green-500 #25D366`. Esse par virou a tagline canônica de mid-funnel; substitui "Chatbots · Atendimento 24h · CRM".
+- **Ícones de contato evoluíram:** outline `#3FA9FF` (v2) → círculos preenchidos `blue-500 #2E8BE6` 3.2mm com gliphos brancos (v3). Padrão muito mais legível em 2.0pt de texto adjacente. Adotar para contact-blocks em landing pages.
+- **Build via Python:** desta vez gerei os 8 SVGs por um script único (`tmp/build_cards.py`) parametrizado por `variant ∈ {dark, light}` × `with_guides ∈ {True, False}`. Vantagem: typography rule `right_edge ≤ 88mm` checada uma vez e propagada. Mantive QR como `<rect>` por módulo (vetorial), 41×41 módulos, EC level H.
+- **Verificação de margem:** caption "ESCANEIE E CONHEÇA" centrada inicialmente em x=75 dava right-edge=88.3mm — 0.3mm acima do alvo. Mudei para x=74. Lição: ao usar `text-anchor="middle"`, calcular `center + half_width` e validar contra 88mm, não confiar no eyeball.
+- **Light variant do verso:** painel direito agora é `pale-blue #E6EFF5` (em vez do navy `#0E1E36` do dark) — mantém a curva e contraste mas com sensação clara coerente. WhatsApp icon mantém o verde original — assinatura inegociável.
+- **Circuit-board decoration:** sutil (4 path angulares + 6 nodes), `stroke="#1FB6A8"` (dark) ou `#2E8BE6` (light), opacity 55%, stroke-width 0.18mm. Garante densidade visual no painel direito sem competir com QR.
+
