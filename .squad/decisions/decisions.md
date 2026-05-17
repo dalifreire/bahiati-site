@@ -2140,7 +2140,7 @@ Ganhar eleição com escala inteligente
 Sem um time grande de comunicação
 
 **Subtítulo:**  
-Um candidato com poucos recursos consegue responder a 1.000 eleitores simultaneamente. Mensagens certas, no WhatsApp, em tempo real.
+Um candidato com poucos recursos consegue responder a centenas de eleitores simultaneamente. Mensagens certas, no WhatsApp, em tempo real.
 
 **CTA:**  
 [Conversar no WhatsApp]
