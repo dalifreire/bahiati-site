@@ -8,3 +8,4 @@
 .squad-workstream
 
 tmp/
+.DS_Store
