@@ -114,9 +114,163 @@
       <li>Responde 24/7 dúvidas sobre o candidato, propostas, votação</li>
       <li>Direciona mensagens baseado no perfil do eleitor</li>
       <li>Qualifica leads — sabe quem é eleitor real vs. apenas curioso</li>
-      <li>Escala conversa — 1.000 conversas simultâneas</li>
+      <li>Escala conversa — centenas de conversas simultâneas</li>
       <li>Aprende com cada interação (melhora respostas)</li>
     </ul>
+  </div>
+</section>
+
+<!-- ── Demo section: como funciona na prática ── -->
+<section class="section section--demo" aria-labelledby="demo-elei-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="demo-elei-title">Veja como funciona na prática</h2>
+      <p class="section__sub">Dois casos reais: um eleitor curioso e um apoiador que precisa de material. A IA resolve os dois em segundos.</p>
+    </div>
+
+    <!-- Cenário 1: Eleitor -->
+    <p style="text-align:center; font-size: var(--text-sm); font-weight:700; color: var(--color-teal-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom: var(--space-6);">Cenário 1 — Eleitor</p>
+    <div class="demo-layout">
+
+      <div class="phone-mockup" aria-label="Exemplo de conversa no WhatsApp com eleitor" role="img">
+        <div class="phone-mockup__header">
+          <span class="phone-mockup__avatar" aria-hidden="true"></span>
+          <div class="phone-mockup__header-info">
+            <strong>Campanha Dr. Marcos Costa</strong>
+            <span>online</span>
+          </div>
+        </div>
+        <div class="phone-mockup__body">
+
+          <div class="chat-contact-label">Carlos Almeida 👤</div>
+
+          <div class="chat-bubble chat-bubble--patient">
+            <p>Boa noite! Quais são as propostas do Dr. Marcos para a saúde?</p>
+            <span class="chat-bubble__time">20:03</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--bot">
+            <p>Olá, Carlos! 👋 Na saúde, o Dr. Marcos propõe:<br>
+            🏥 Ampliar UBSs nos bairros periféricos<br>
+            💊 Farmácia popular em todos os distritos<br>
+            📋 Prontuário eletrônico unificado<br>
+            Quer saber mais?</p>
+            <span class="chat-bubble__time">20:03 ✓✓</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--patient">
+            <p>Tem evento essa semana?</p>
+            <span class="chat-bubble__time">20:04</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--bot">
+            <p>Sim! 🎉 <strong>Quinta-feira às 19h</strong> no Centro Comunitário do Bairro Novo. Reservo sua presença? Você receberá um lembrete 📅</p>
+            <span class="chat-bubble__time">20:04 ✓✓</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--patient">
+            <p>Quero sim! 👍</p>
+            <span class="chat-bubble__time">20:04</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--bot">
+            <p>✅ Presença confirmada, Carlos! Lembrete na quinta de manhã. Até lá! 😊</p>
+            <span class="chat-bubble__time">20:04 ✓✓</span>
+          </div>
+
+        </div>
+      </div><!-- /.phone-mockup -->
+
+      <div class="demo-annotations" aria-label="Destaques do cenário eleitor">
+        <div class="annotation-card">
+          <div class="annotation-card__label">⚡ Resposta em segundos</div>
+          <p>Do "Boa noite" à resposta completa: menos de 3 segundos. Sem fila, sem espera, sem eleitor frustrado.</p>
+        </div>
+        <div class="annotation-card">
+          <div class="annotation-card__label">📊 1.000 conversas simultâneas</div>
+          <p>Enquanto Carlos é atendido, outros 999 eleitores recebem respostas ao mesmo tempo — pela mesma IA, sem filas.</p>
+        </div>
+        <div class="annotation-card">
+          <div class="annotation-card__label">🎯 Time focado em estratégia</div>
+          <p>A IA cuida do operacional. Sua equipe fica livre para criar, planejar e tomar as decisões que importam.</p>
+        </div>
+      </div><!-- /.demo-annotations -->
+
+    </div><!-- /.demo-layout -->
+
+    <div style="margin: var(--space-20) 0 var(--space-16); border-top: 1px solid rgba(255,255,255,0.15);"></div>
+
+    <!-- Cenário 2: Apoiador / Santinho -->
+    <p style="text-align:center; font-size: var(--text-sm); font-weight:700; color: var(--color-teal-500); text-transform:uppercase; letter-spacing:.06em; margin-bottom: var(--space-6);">Cenário 2 — Apoiador</p>
+    <div class="demo-layout">
+
+      <div class="phone-mockup" aria-label="Exemplo de conversa no WhatsApp com apoiador gerando santinho com foto" role="img">
+        <div class="phone-mockup__header">
+          <span class="phone-mockup__avatar" aria-hidden="true"></span>
+          <div class="phone-mockup__header-info">
+            <strong>Campanha Dr. Marcos Costa</strong>
+            <span>online</span>
+          </div>
+        </div>
+        <div class="phone-mockup__body">
+
+          <div class="chat-contact-label">Vanessa Lima 👤</div>
+
+          <div class="chat-bubble chat-bubble--patient">
+            <p>Oi! Sou apoiadora do Dr. Marcos. Quero um santinho para distribuir no Bairro da Paz.</p>
+            <span class="chat-bubble__time">14:22</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--bot">
+            <p>Oi Vanessa! 😊 Posso gerar um santinho personalizado com a sua foto agora mesmo!<br><br>
+            Me manda uma selfie sua para eu incluir no material 🤳</p>
+            <span class="chat-bubble__time">14:22 ✓✓</span>
+          </div>
+
+          <!-- Selfie photo bubble -->
+          <div class="chat-bubble chat-bubble--patient">
+            <div style="background:rgba(0,0,0,0.12); border-radius:.5rem; padding:.75rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:.25rem; margin-bottom:.25rem;">
+              <span style="font-size:2rem;">🤳</span>
+              <span style="font-size:.65rem; color:rgba(0,0,0,0.45);">selfie_vanessa.jpg</span>
+            </div>
+            <span class="chat-bubble__time">14:23</span>
+          </div>
+
+          <div class="chat-bubble chat-bubble--bot">
+            <p>⏳ Processando sua foto…</p>
+            <span class="chat-bubble__time">14:23 ✓✓</span>
+          </div>
+
+          <!-- Generated santinho bubble -->
+          <div class="chat-bubble chat-bubble--bot">
+            <div style="background:rgba(255,255,255,0.07); border-radius:.5rem; padding:.75rem; text-align:center; display:flex; flex-direction:column; align-items:center; gap:.25rem; margin-bottom:.5rem;">
+              <span style="font-size:2rem;">🗳️</span>
+              <span style="font-size:.65rem; color:rgba(255,255,255,0.45);">santinho_vanessa_bairro_da_paz.pdf</span>
+            </div>
+            <p>✅ Pronto! Seu santinho com sua foto está gerado:<br>
+            Tamanho A6, pronto para gráfica. Bons votos! 🎉</p>
+            <span class="chat-bubble__time">14:24 ✓✓</span>
+          </div>
+
+        </div>
+      </div><!-- /.phone-mockup -->
+
+      <div class="demo-annotations" aria-label="Destaques do cenário apoiador">
+        <div class="annotation-card">
+          <div class="annotation-card__label">🤳 Santinho com a sua foto</div>
+          <p>O apoiador manda uma selfie e recebe um santinho personalizado com o próprio rosto — em segundos, sem designer.</p>
+        </div>
+        <div class="annotation-card">
+          <div class="annotation-card__label">🎨 Arte pronta para gráfica</div>
+          <p>O arquivo gerado sai no tamanho e resolução certos. O apoiador leva direto à gráfica local — sem ajuda extra.</p>
+        </div>
+        <div class="annotation-card">
+          <div class="annotation-card__label">📍 Escala sem esforço</div>
+          <p>Centenas de apoiadores em bairros diferentes recebem seus santinhos personalizados ao mesmo tempo, sem trabalho manual.</p>
+        </div>
+      </div><!-- /.demo-annotations -->
+
+    </div><!-- /.demo-layout -->
   </div>
 </section>
 

@@ -2170,7 +2170,7 @@ Um sistema que:
 - **Responde 24/7** dúvidas sobre o candidato, propostas, votação
 - **Direciona mensagens** baseado no perfil do eleitor
 - **Qualifica leads** — sabe quem é eleitor real vs. apenas curioso
-- **Escala conversa** — 1.000 conversas simultâneas
+- **Escala conversa** — centenas de conversas simultâneas
 - **Aprende** com cada interação (melhora respostas)
 
 ---
