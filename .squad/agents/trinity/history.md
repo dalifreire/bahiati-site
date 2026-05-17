@@ -9,6 +9,7 @@
 
 - Initial role: Frontend Dev for responsive static-site implementation.
 - Noted that gestao-clinicas hero has 3 metric cards; "9 ferramentas" was replaced with "Plug & Play / Sem instalar nenhum app" to keep stats evergreen.
+- A WhatsApp conversation mockup section ("Veja como funciona na prática") was added to `portifolio/gestao-clinicas/index.html` using a CSS-only phone mockup (`.phone-mockup`, `.chat-bubble`, `.chat-bubble--patient`, `.annotation-card` classes) with a dark background section (`.section--demo`). All CSS lives at the bottom of `assets/css/styles.css` under the `/* ── Clínicas demo diagram ──` block.
 
 ---
 
