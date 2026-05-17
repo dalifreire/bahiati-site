@@ -75,3 +75,17 @@ Refatoração completa dos 8 SVGs após Dali aprovar um mockup novo. Substitui v
 - **Light variant do verso:** painel direito agora é `pale-blue #E6EFF5` (em vez do navy `#0E1E36` do dark) — mantém a curva e contraste mas com sensação clara coerente. WhatsApp icon mantém o verde original — assinatura inegociável.
 - **Circuit-board decoration:** sutil (4 path angulares + 6 nodes), `stroke="#1FB6A8"` (dark) ou `#2E8BE6` (light), opacity 55%, stroke-width 0.18mm. Garante densidade visual no painel direito sem competir com QR.
 
+## Learnings
+
+**2026-05-17T12:49:06-07:00 — Cartão de Visita v4 (feature-grid)**
+
+Dali aprovou um novo mockup ("gostei mais do modelo em anexo") trocando a frente da v3. A v4 substitui o balão outline gigante por uma **grade de 4 features** (ícone outline + label 2-linhas small-caps), separada do bloco de marca por um divisor vertical fino com gradiente.
+
+- **Nova assinatura da frente:** layout meio-a-meio (logo+wordmark à esquerda × feature-grid à direita) com **vertical separator** em `x=51.5` usando linearGradient `bt-sep` (azul→teal→azul, fade nas pontas, stroke-width 0.35). Esse separador é o novo motivo divisor — usar em hero sections do site quando precisar dividir "marca / value-prop".
+- **Icon library (4 outline icons reutilizáveis):** chat-gear, brain (com nodes de circuito), whatsapp speech-bubble+phone, bar-chart+arrow. Tamanho canônico 5mm × 5mm, stroke 0.7 user-units (~0.35mm), gradient `bt-icon-stroke` (blue-400→teal-500) — exceto WhatsApp que mantém `#25D366` sólido. Internal viewBox 0-10 + transform scale. Vão virar `<FeatureIcon kind="...">` no front-end.
+- **Telefone agora com `+55`:** padrão Dali alinhado ao mockup — usar `+55 71 98380-3720` em todas as superfícies (cartão, site, assinaturas). Substitui o formato curto `71 98380-3720` da v3.
+- **Tag tipográfica para grid labels:** label-row de 2 linhas usando Inter 600 (line 1) + Inter 500 (line 2) ambas font-size 2.1, letter-spacing 0.6, espaçamento entre linhas 2.8mm. Label mais longa ("MAIS RESULTADOS") right-edge=87.2mm — sobra 0.8mm. Se a gráfica relatar corte óptico, baixar letter-spacing de 0.6 → 0.4.
+- **Estrutura do script v4:** `tmp/build_cards_v4.py` substitui `build_cards.py` — same pattern (parametrizado `variant × with_guides`) mas com funções `icon_*(stroke)` extraídas para a icon-library. QR sempre via `qrcode` lib + row-run encoding (`<rect width="N" height="1">` por sequência contígua), reduz tamanho do SVG em ~70% vs. um rect por módulo.
+- **Curva-S do verso preservada exatamente:** mesmo Bezier `M 96 0 L 56 0 C 56 16, 66 22, 62 32 C 58 42, 54 50, 54 56 L 96 56 Z` — virou um asset estável da marca.
+- **Validation via qlmanage:** macOS `qlmanage -t -s 800 -o tmp <svg>` gera PNG decente para sanity-check antes de ir para a gráfica. Sem `cairosvg` nem `rsvg-convert` instalados nesse mac, qlmanage é o renderer disponível.
+

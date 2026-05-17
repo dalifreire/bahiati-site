@@ -62,6 +62,41 @@ Refatoração completa dos 8 SVGs em `assets/print/`. Substitui integralmente a 
 
 **Reversibilidade:** Build determinístico via `tmp/build_cards.py`; arquivos v2 sobrescritos. Para reverter, recuperar do histórico git.
 
+### 2026-05-17T12:49:06.049-07:00: Cartão de Visita v4 — Feature-Grid Layout
+
+**By:** Neo (Designer Visual/Brand)  
+**Status:** Aprovado para produção — substitui v3.  
+**Requested by:** Dali Freire
+
+**O que mudou (v3 → v4):**
+
+**Frente — novo layout "feature-grid"**  
+A v3 usava o balão outline gigante na metade direita; v4 substitui por **grade de 4 features** mais informativa:
+
+- **Esquerda (~52mm):** logo + wordmark "Bahia / Tecnologia" centralizado verticalmente; tagline 2 linhas small-caps ("AUTOMAÇÕES PARA **WHATSAPP**" / "E **INTELIGÊNCIA ARTIFICIAL**").
+- **Separador vertical em x=51.5:** linha 0.35mm com gradiente azul→teal→azul, fade nas pontas.
+- **Direita (~44mm):** 4 linhas ícone-outline + label 2-linhas small-caps:
+  1. Chat bubble + gear — "AUTOMAÇÕES / INTELIGENTES"
+  2. Brain com nós de circuito — "INTELIGÊNCIA / ARTIFICIAL"  
+  3. WhatsApp speech-bubble + phone (verde `#25D366`) — "INTEGRAÇÃO / COM WHATSAPP"
+  4. Bar chart + arrow up — "MAIS TEMPO, / MAIS RESULTADOS"
+
+Ícones a 5mm de altura, stroke 0.7 user-units (≈0.35mm) em gradiente `bt-icon-stroke`.
+
+**Verso — ajuste menor**  
+Mantém layout v3 (split cream/navy com curva-S). **Mudança única:** Telefone agora `+55 71 98380-3720` (incluindo country code).
+
+**Light variants**  
+Frente: fundo cream-50, ícones mesmo gradiente. Verso: cream/branco × pale-blue `#E6EFF5`.
+
+**Build & auditoria tipográfica**  
+- Script `tmp/build_cards_v4.py` — parametrizado, 8 SVGs determinísticos.
+- Auditoria tipográfica: todos textos ≤88mm ✓ (label "MAIS RESULTADOS" é a mais apertada a ~87.2mm).
+- Ícones viram componente reutilizável (`<FeatureIcon>`) para landing pages.
+- 4 labels de feature viram **manifesto-de-features canônico** para copy do site.
+
+**Arquivos:** 8 SVGs em `assets/print/` (dark + light × frente + verso × com/sem guides). README.md auditado.
+
 ## Governance
 
 - All meaningful changes require team consensus
