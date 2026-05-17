@@ -2306,7 +2306,7 @@ Contratando secretária não funciona (caro, rotatividade alta). Chatbot genéri
 
 ### Seção: O que é
 
-**H2:** Agente IA para clínica
+**H2:** Agente IA para clínicas
 
 **Copy:**  
 Um assistente inteligente que:

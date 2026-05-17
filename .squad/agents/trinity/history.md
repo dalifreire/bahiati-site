@@ -8,6 +8,7 @@
 ## Learnings
 
 - Initial role: Frontend Dev for responsive static-site implementation.
+- Noted that gestao-clinicas hero has 3 metric cards; "9 ferramentas" was replaced with "Plug & Play / Sem instalar nenhum app" to keep stats evergreen.
 
 ---
 
