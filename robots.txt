@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bahiatecnologia.com.br/sitemap.xml
+Sitemap: https://www.bahiatecnologia.com.br/sitemap.xml

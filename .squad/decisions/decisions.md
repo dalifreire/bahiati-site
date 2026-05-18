@@ -1733,7 +1733,7 @@ Renomeação completa da "Plataforma Eleitoral" para "Plataforma de Inteligênci
 **DEPOIS:**
 ```html
 <article class="card card--light">
-  <h3>Cobertura estadual</h3>
+  <h3>Cobertura nacional</h3>
   <p>Comunicação de alto impacto em múltiplos municípios. Sem limites geográficos ou de quantidade de contatos.</p>
   <ul><li>Integração com dados eleitorais</li>
       <li>Segmentação por interesse</li>
@@ -1844,7 +1844,7 @@ Somos especialistas em automação de conversas. Colocamos inteligência no What
 
 **Pilar 2: Agentes IA**
 - **Título:** IA que entende seu negócio
-- **Descrição:** Treinar é fácil. Carregue documentos, manuais, dados da sua clínica ou campanhas. A IA aprende e responde com precisão. Seu conhecimento, sua voz.
+- **Descrição:** Treinar é fácil. Carregue documentos, manuais, dados da sua empresa ou campanhas. A IA aprende e responde com precisão. Seu conhecimento, sua voz.
 
 **Pilar 3: Integrações**
 - **Título:** Conecta com suas ferramentas

@@ -45,3 +45,21 @@ Complete multi-page static site with 10 HTML pages, shared CSS design system, va
 | Real WhatsApp number | ⚠️ Placeholder | Using 5571999999999 — Dali must replace before deploy |
 | Email address | ⚠️ Placeholder | Using contato@bahiatecnologia.com.br — validate with Dali |
 | Lighthouse run | ⚠️ Not run | Requires live environment; structure is compliant |
+
+## Learnings
+
+### 2026-05-17 — Prova Real section redesign
+
+**Task:** Redesign `section#credibilidade` cards for visual parity and impact.
+
+**Key decision:** Replaced `∞` metric on Electoral card with `+1.000` — concrete, numeric, scannable in the same way `15h/sem` is on the Clinics card. Both cards now share identical structural hierarchy: h3 → `.metric` (value + label) → `.feature-list` (3 bullets).
+
+**Copy improvements:**
+- Section h2 upgraded from "Confiança construída na prática" → "Resultados reais, em campo" — more direct, action-oriented.
+- Electoral metric label now specifies "via WhatsApp — de municipal a estadual" to ground the number in context.
+- Electoral bullets rewritten from vague ("Cobertura nacional de alto impacto") to benefit-led ("Zero custo noturno — o robô nunca dorme").
+- Clinics bullets kept structurally but polished: added "via WhatsApp" specificity, "20–30%" with em-dash, "e agendas" to round out the last bullet.
+
+**Visual consistency principle:** When two `.card--dark` cards sit in a `grid-2`, their metric values must be of comparable visual weight. Single symbols (`∞`) render at baseline width and create optical imbalance against multi-character numeric values. Prefer numeric/alphanumeric metrics for all proof-point cards.
+
+**No CSS changes needed** — existing `.metric__value` gradient + clamp sizing handles both values identically.
