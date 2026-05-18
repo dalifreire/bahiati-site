@@ -63,3 +63,22 @@ Complete multi-page static site with 10 HTML pages, shared CSS design system, va
 **Visual consistency principle:** When two `.card--dark` cards sit in a `grid-2`, their metric values must be of comparable visual weight. Single symbols (`∞`) render at baseline width and create optical imbalance against multi-character numeric values. Prefer numeric/alphanumeric metrics for all proof-point cards.
 
 **No CSS changes needed** — existing `.metric__value` gradient + clamp sizing handles both values identically.
+
+### 2026-05-17 — Cenário 4: Inteligência Eleitoral
+
+**Task:** Add Cenário 4 (Inteligência Eleitoral) to `portifolio/plataforma-eleitoral/index.html` — section `#como-funciona` (`.section--demo`).
+
+**Insertion point:** Lines 362–507 (after Cenário 3 `.demo-layout` closing tag, before section close). Preceded by a standard divider div.
+
+**Intro text update:** Changed fixed-number copy "Três cenários de uso: …" → open-ended "Da conversa com o eleitor à inteligência territorial: veja como a plataforma atua em cada frente da campanha, em tempo real, com IA." — avoids the need to update this line every time a new scenario is added.
+
+**Dashboard design decisions:**
+- Reused `.phone-mockup` at `max-width: 420px` (wider than standard 380px to fit the matrix table).
+- Header background `#091525` — same as Cenário 3, consistent executive panel feel.
+- Ranking block: 4 generic municipalities (A–D) with bar + numeric score + emoji indicator. Color coding: green `#25D366` = base consolidada, amber `#F59E0B` = potencial, red `#EF4444` = vazio.
+- Priorização matrix: `<table>` inline — simplest markup for a 5-column grid; avoids flexbox complexity. Two rows (A = strong, C = weak) for contrast.
+- "Vazio Eleitoral Detectado" card: **blue border** `#2E8BE6` — differentiated from Cenário 3's amber `⚠️ Alerta Crítico`. Background `rgba(46,139,230,0.06)`.
+- "Subconversão Partidária" card: **amber border** `#F59E0B` — indicates caution/opportunity, not crisis.
+- All municipality names, numbers, and geographic references are fictional/generic per brief rules.
+- No new CSS file or `<style>` block needed — all styling via inline styles, matching the pattern of Cenário 3.
+
