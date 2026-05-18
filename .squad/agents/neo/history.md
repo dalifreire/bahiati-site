@@ -89,3 +89,27 @@ Dali aprovou um novo mockup ("gostei mais do modelo em anexo") trocando a frente
 - **Curva-S do verso preservada exatamente:** mesmo Bezier `M 96 0 L 56 0 C 56 16, 66 22, 62 32 C 58 42, 54 50, 54 56 L 96 56 Z` — virou um asset estável da marca.
 - **Validation via qlmanage:** macOS `qlmanage -t -s 800 -o tmp <svg>` gera PNG decente para sanity-check antes de ir para a gráfica. Sem `cairosvg` nem `rsvg-convert` instalados nesse mac, qlmanage é o renderer disponível.
 
+## Learnings
+
+**2026-05-18T08:36:39-07:00 — Propostas de Logo (3 opções SVG)**
+
+- **Opção 1 — Símbolo + Wordmark horizontal:** Hexágono com 6 nós de rede interconectados por linhas internas (cross-edges em baixa opacidade). Nó central luminoso (teal fill + ponto cream) funciona como "cérebro" da marca. Wordmark com bold "Bahia" + dot teal como separador visual + "Tecnologia" em azul regular. Tagline em small-caps spacing. viewBox 480×100 — ideal para header de site.
+- **Opção 2 — Ícone vertical WhatsApp × IA:** Bolha de chat (path com tail de balão) como container do símbolo neural. Gradiente `#25D366 → #2E8BE6` no fill da bolha. Nós e linhas brancos com fundo navy interno — garante contraste. Layout vertical (ícone 140px + wordmark abaixo). Funciona como app icon e favicon. viewBox 200×240.
+- **Opção 3 — Wordmark tipográfico com acento geográfico:** Split "BAHIA" bold ↔ "TECNOLOGIA" light com separador vertical teal. Onda sinusoidal fluida como underline (`path` com curvas cúbicas) — gradiente fade-in/out nas pontas. Ponto de destaque na onda marca Salvador. Tagline "SALVADOR, BA" ancora o posicionamento geográfico. viewBox 480×90.
+- **Regra para SVG standalone:** Todas as opções usam `font-family: 'Arial', 'Helvetica', sans-serif` — sem dependência externa. Todos têm `<title>` e `<desc>` para acessibilidade. Fundo transparente (sem `<rect>` de fundo).
+- **Preview HTML:** Arquivo `preview.html` com grid 3-colunas mostra as 3 opções em dark (#0A1628) e light (#F5F7FA) com badges, metadados de direção criativa e strip de paleta.
+- **Dark vs. light:** Opções 1 e 3 (texto branco) precisariam de adaptação para fundo claro — variante navy/dark-blue para texto. Opção 2 (ícone com fundo navy interno + gradiente colorido) lê melhor em ambos os fundos.
+
+
+## Learnings
+
+**2026-05-18T08:51:10-07:00 — 4 Variações do Logo Opção 2**
+
+Dali aprovou a Opção 2 (balão+IA, gradiente #25D366→#2E8BE6). Criadas 4 variações de balão de conversa, todas mantendo identidade: ícone vertical, gradiente canônico, wordmark "BAHIA TECNOLOGIA", tagline "Automação Inteligente para WhatsApp".
+
+- **V2A — Balão arredondado (WhatsApp style):** `Q` curves com corners ~37px para bordas muito arredondadas, tail bottom-right. Rede neural (hub central + 6 satélites radiais) em fill branco sobre fundo navy, clipped ao balloon path. Abordagem de clip-path inline requer que o `<clipPath>` use a mesma forma path do balloon.
+- **V2B — Diálogo bilateral:** Dois balões separados (sem gradiente entre si): pequeno verde (human, tail bottom-left) + grande azul (AI, tail bottom-right) sobrepostos em cascata. O balão da frente é desenhado por último (painter's model). Neural circuit dentro do balão azul. A clipPath referencia apenas o balloon da frente para conter os nós.
+- **V2C — Balão hexagonal:** Hexágono flat-top com tail integrado como interrupção da borda inferior (`L 122,116 L 110,136 L 88,116`). Fill `#0E1E36` + stroke `url(#gradC)` stroke-width 3 — gradiente em stroke funciona nativamente em SVG 1.1. Rede neural em layout layer (input cyan → hidden white → output blue) com `filter="url(#glowC)"` para efeito luminoso. `feGaussianBlur stdDeviation=2` + feMerge com SourceGraphic é o padrão de inner-glow em SVG.
+- **V2D — Minimalista oval ∞:** Elipse ~rx=78 ry=48 com tail centrado no bottom usando path `M 108,110 C ... C 92,110 L 100,130 L 108,110 Z`. Texto `∞` (Unicode U+221E literal) em font-size 50, fill `url(#gradDinf)` horizontal. O gradiente horizontal na direção x=0%→x=100% garante o bicolor no símbolo. Sub-label "IA" em fill-opacity 0.45 para hierarquia sutil.
+- **Preview.html:** Adicionadas duas novas sections (dark + light) com `grid-template-columns: repeat(4, 1fr)` inline para evitar alterar o CSS global das 3 opções originais. Badges de variação usam cor `#25D366` para distinguir das opções originais com `#1FB6A8`.
+- **Regra reforçada:** IDs de gradient únicos por arquivo (gradA, gradB, gradC, gradD) — crítico quando SVGs são inlinizados na mesma página (Trinity vai precisar disso no site).

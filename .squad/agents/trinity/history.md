@@ -64,6 +64,22 @@ Complete multi-page static site with 10 HTML pages, shared CSS design system, va
 
 **No CSS changes needed** — existing `.metric__value` gradient + clamp sizing handles both values identically.
 
+### 2026-05-18 — Logo v2d Integration (logo-v2d.svg)
+
+**Task:** Integrate new brand logo (Neo's logo-v2d.svg — oval chat balloon, dark navy gradient fill, gradient green→blue stroke) across the entire site.
+
+**What changed:**
+- `tmp/logos/logo-v2d.svg` → copied to `assets/logo.svg` (new site logo) and `assets/favicon.svg` (overwrote old favicon)
+- All 10 HTML pages updated — inline SVG icon + `.navbar__logo-text` div replaced with `<img src="{relative}/assets/logo.svg" alt="Bahia Tecnologia" height="50" class="site-logo">`
+- Files updated: `index.html`, `404.html`, `sobre/index.html`, `servicos/index.html`, `contato/index.html`, `portifolio/index.html`, `portifolio/gestao-clinicas/index.html`, `portifolio/plataforma-eleitoral/index.html`, `politica-privacidade/index.html`, `termos/index.html`
+- CSS class `.site-logo` appended to `assets/css/styles.css` (`height: 50px; width: auto; display: inline-block; vertical-align: middle;`)
+- All favicon `<link rel="icon">` tags already present in every page — no additions needed
+- Relative paths used per page depth: root = `assets/logo.svg`, one level = `../assets/logo.svg`, two levels = `../../assets/logo.svg`
+
+**Nav structure preserved:** `<a class="navbar__logo">` wrapper, hamburger, all links, CTA button — untouched.
+
+---
+
 ### 2026-05-17 — Cenário 4: Inteligência Eleitoral
 
 **Task:** Add Cenário 4 (Inteligência Eleitoral) to `portifolio/plataforma-eleitoral/index.html` — section `#como-funciona` (`.section--demo`).
